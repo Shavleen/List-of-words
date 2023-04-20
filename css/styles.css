@@ -1,0 +1,105 @@
+/*All my stylings to make things user friendly*/
+/* Items in my list*/
+li{
+    width:70%;
+    height:30px;
+    background-color: rgb(110, 19, 20);
+    border:1px solid rgb(253, 253, 253);
+    margin-left: auto;
+    margin-right:20%;
+    margin-bottom:10%;
+    padding-left:10%;
+    padding-top: 5%;
+    padding-bottom:5%;
+    padding-right: 10%;
+    font-family:"Papyrus";
+    font-weight: bold;
+    color:rgb(159, 141, 160);
+         
+}
+/*hovering over items on list*/
+li:hover {
+    background-color: rgb(244, 248, 246);
+    transition: background-color 0.5s;
+}
+
+/* Unordered list */
+ul{
+    list-style-type: none;
+}
+
+/*styling for all the h1*/
+h1{
+    font-family:"Papyrus";
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+/*These are the divs that have set on it*/
+/*Main set*/
+.set{
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(78, 41, 92);
+    border: rgb(64, 93, 220);
+    border-style: ridge;
+    margin:auto;
+    padding:10px;
+    margin-top:20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    }
+
+/* Wide screen (desktop) */
+@media screen and (min-width: 992px) {
+    body {
+        text-align: center; /* Align divs to center */
+    }
+    .set {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(21% - 20px);
+    }
+}
+
+/* Medium screen (tablet) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /*adjusts the set*/
+    .set {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 20px);
+        box-sizing: border-box;
+    }
+
+    /* Clear the floats after every second div
+        start next div on a new line */
+    .set:nth-child(2n)::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+/* Small screen (mobile) */
+@media screen and (max-width: 767px) {
+    /*adjusts the set*/
+    .set {
+        display: block;
+        width: 80%;
+    }
+}
+
+/* Stylings for the title and footer */
+#MyTitle, #MyFoot {
+    text-align: center;
+    font-family:"Papyrus";
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    background: rgb(26, 80, 55);
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
